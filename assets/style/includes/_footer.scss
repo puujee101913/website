@@ -1,0 +1,54 @@
+.footer {
+    width: 100%;
+    min-height: 278.8px;
+    background-color: #dba539;
+    padding: 10px 0;
+    @include flex(column, space-between, center, 0);
+    transition: .2s;
+    text-align: center;
+    .logo {
+        @include flex(column, space-between, center, 0);
+        cursor: pointer;
+        font-size: 18px;
+        &__white {
+            width: 100px;
+            padding: 18px 0;
+        } 
+        .shopTitle {
+            @include shopTitle($white);
+            font-size: 11.7px;
+        }
+        .shopTitle:hover {
+            color: $hover;
+        }
+    }
+
+    .social-links {
+        @include flex(row, center, center, 0);
+        list-style: none;
+        margin-bottom: 55.5px;
+    }
+
+    .charity {
+        h5 {
+        color: $white;
+        font-weight: normal;
+        font-size: 21px;
+        }   
+    }
+
+    .copyright {
+        width: 100%;
+        padding: 11.7px 0;
+        letter-spacing: .1em;
+        background-color: #805f1e;
+        font-size: 11.7px;
+        font-family: $playfair;
+        color: $white;
+        @include flex(column, flex-end, center, 0);
+    }
+
+    @media (min-width: 624px) {
+        min-height: 385.38px;
+    }
+}

@@ -1,0 +1,172 @@
+.wrapper {
+    width: 100%;
+    min-height: 969px;
+    background-color: $white;
+    padding-bottom: 12px;
+    @include flex(column, flex-start, center, 0);
+    text-align: center;
+    .header-page {
+        margin: 23px 12px 12px 45px;
+        .shopTitle {
+            @include shopTitle($black);
+            font-size: 11.7px;
+        }
+        h1 {
+            width: 100%;
+            font-weight: normal;
+            font-style: italic;
+            font-size: 36px;
+            margin-bottom: 14px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #49423b;
+
+            @media (min-width: 624px) {
+                font-size: 72px;
+            }
+        }
+        p {
+            font-family: $alice;
+            font-size: 21px;
+        }
+    }
+
+    .product {
+        margin-left: 45px;
+        list-style: none;
+        li {
+            width: 100%;
+            margin-right: 12px;
+            .thump {
+                width: 100%;
+                .logo__img {
+                    max-width: 100%;
+                }
+                .figcaption {
+                    max-width: 100%;
+                    font-size: 36px;
+                    transition-delay: 0.15s;
+                    h1 {
+                        width: 100%;
+                        font-weight: normal;
+                        font-family: $playfair;
+                        font-size: 36px;
+                        @include flex(column, flex-start, center, 0);
+                        margin-bottom: 14px;
+                        padding-bottom: 28px;
+                        border-bottom: 1px solid #49423b;
+                        span {
+                            font-size: 22px;
+                        }
+                    }
+                    .tom {
+                        margin-bottom: 14px;
+                    }
+
+                    .tom:hover {
+                        color: $hover;
+                        cursor: pointer;
+                    }
+                
+                @media (min-width: 624px) {
+                    display: none;
+                }
+                }
+            
+            }
+        }
+        @media (min-width: 624px) {
+            @include flex(row, space-between, center, 160px);
+        }  
+    }
+}
+
+.divider {
+    width: 100%;
+    min-height: 646px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0261/4687/t/7/assets/img_homepage_divider.jpg?v=10908527258020221636);
+    background-size: cover;
+    background-position: center;
+    background-position-y: -146.711px;
+    background-repeat: no-repeat;
+}
+
+.about {
+    min-height: 969px;
+    padding-top: 22px;
+    padding-bottom: 45px;
+    background-color: #f4efde;
+    @include flex(column, flex-start, center, 0);
+    text-align: center;
+    .page {
+        margin: 22px 12px 12px 45px;
+        max-width: 1071px;
+        .shopTitle {
+            @include shopTitle($black);
+            font-size: 11.7px;
+        }
+        h1 {
+            width: 100%;
+            font-weight: normal;
+            font-style: italic;
+            font-size: 36px;
+            margin-bottom: 18px;
+            padding-bottom: 36px;
+            border-bottom: 1px solid #49423b;
+
+            @media (min-width: 624px) {
+                font-size: 72px;
+            }
+        }
+        p {
+            font-family: $alice;
+            font-size: 21px; 
+        }
+        
+    }
+
+    .about-item-wrapper {
+        max-width: 1571px;
+        @include flex(column, flex-start, center, 0);
+        margin-bottom: 35px;
+        margin-left: 34px;
+        .about-item {
+            width: 100%;
+            margin-right: 9.5px;
+            margin-bottom: 45px;
+            @include flex(column, center, center, 0);
+            h3 {
+                width: 100%;
+                font-weight: normal;
+                font-size: 36px;
+                padding-top: 30px;
+                margin-bottom: 15px;
+            }
+            hr {
+                width: 202.45px;
+                color: $black;
+            }
+            p {
+                width: 100%;
+                font-family: $alice;
+                margin-bottom: 7.5px;
+                padding: 15px 8px 0 8px;
+                font-size: 16px;
+            }
+        }
+        @media (min-width: 624px) {
+            @include flex(row, center, center, 0);
+        }
+
+    }
+    
+}
+
+.footer-image {
+    width: 100%;
+    min-height: 484.5px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0261/4687/t/7/assets/img_homepage_footer.jpg?v=5164167556579775996);
+    background-size: cover;
+    background-position: center;
+    background-position-y: -96.5px;
+    background-repeat: no-repeat;
+}

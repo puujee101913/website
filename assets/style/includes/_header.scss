@@ -1,0 +1,77 @@
+.header {
+    width: 100%;
+    background-color: $white;
+    padding: 10px 0;
+    @include flex(row, space-between, center, 0);
+    transition: .2s;
+    .logo {
+        @include flex(row, space-between, center, 0);
+        cursor: pointer;
+        &__black {
+            width: 50px;
+            margin: 0 10px;
+        } 
+        .shopTitle {
+            @include shopTitle($black);
+        }
+        .shopTitle:hover {
+            color: $hover;
+        }
+    }
+
+    .cart {
+        padding: 0 1rem;
+    }
+
+    @media (min-width: 992px) {
+        display: none;
+    }
+}
+
+
+.header--desktop {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    ul {
+        @include flex(row, space-between, center, 0);
+        list-style: none;
+        li {
+            height: 111px;
+            @include flex(column, center, center, 0);
+            font-size: 16px;
+            transition: .2s;
+            a {
+                padding: 0 2em 0.75em 2em;
+                font-family: $alice;
+                color: $white;
+                border-bottom: 1px solid rgba(255,255,255,.3);
+            }
+            a:hover {
+                color: $hover;
+            }
+            .logo {
+                @include flex(column, center, center, 0);
+                &__white {
+                    width: 100px;
+                    padding: 0 0 12px;
+                }
+            }
+            .shopTitle {
+                @include shopTitle($white);
+                font-size: 10.4px;
+                padding: 0 40px;
+                cursor: pointer;
+            }
+            .shopTitle:hover {
+                color: $hover;
+            }
+        }
+    }
+    
+    @media (min-width: 992px) {
+        display: flex;
+    }
+}
